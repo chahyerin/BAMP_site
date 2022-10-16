@@ -2,6 +2,7 @@
     margin: 0px;
     box-sizing: 0px;
 }
+
 $white: #fff;
 $black: #000;
 $bampYellow: #FFC800;
@@ -12,10 +13,14 @@ $mobile: 768px;
     background-color: $white;
     width: 100%;
     height: 100%;
-    z-index: 1000;
     position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    top: 10%;
+
 }
 .intro-title {
     h1 {
@@ -40,30 +45,43 @@ $mobile: 768px;
     justify-content: center;
     margin: 28px auto 0px;
 }
-.active-box-line {
-    width: 140px;
-    height: 140px;
-    border-radius: 35px;
-    border: 3px solid $bampYellow;
+.active-box-line { // 라디오 버튼으로 변경하기 
+    width: 88px;
+    height: 88px;
+    border-radius: 25px;
+    border: 2px solid $bampYellow;
+    transition: transform 0.3s;
     .profile-img {
-        width: 120px;
-        height: 120px;
-        margin: 10px auto;
+        width: 80px;
+        height: 80px;
+        margin: 4px auto;
         background-color: $bampYellow;
-        border-radius: 30px;
-        cursor: pointer;
+        border-radius: 20px;
     }
 }
 .user-name {
     margin-top: 24px;
     h5{
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 500;
     }
+}
+.active-text-line {
+    margin: auto;
+    width: 100%;
+    height: 3px;
+    margin-top: 4px;
+    background-color: $bampYellow;
+    transform: translateX(-100px);
+    transition: transform 0.3s;
+}
+.profile {
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.profile:hover {
     .active-text-line {
-        margin: auto;
-        width: 70%;
-        height: 3px;
-        background-color: $bampYellow;
+        transform: translateX(0px);
     }
 }
 .enter-btn {
@@ -74,27 +92,31 @@ $mobile: 768px;
     color: $white;
     border: none;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .enter-btn:hover {
     cursor: pointer;
 }
+
+//메인페이지 
 .main-page {
-    visibility: hidden;
+    display: none;
 }
 .show {
-    visibility: visible;
+    display: initial;
 }
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
+//헤더
 .header {
     position: fixed;
     width: 100%;
     height: 60px;
     left: 0px;
     top: 0px;
+    z-index: 1000;
 
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
@@ -105,16 +127,61 @@ $mobile: 768px;
         height: 30px;
     }
 }
+
+//채팅 영역
 .chatting-area {
     max-width: 750px;
     width: 100%;
-    height: 800px;
     background-color: antiquewhite;
     margin: auto;
+    padding: 80px 20px 40px;
+    position: relative;
+
 }
+.chat-message {
+    text-align: center;
+}
+.chat-left {
+    margin-top: 24px;
+    display: flex;
+}
+.chat-profile {
+    width: 40px;
+    height: 40px;
+    background-color: #999;
+    border-radius: 40px;
+}
+.chat-user-information {
+    margin-left: 10px;
+    .chat-user-name {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+.chat-box {
+    margin-top: 8px;
+    font-size: 16px;
+    padding: 10px 24px 8px;
+    background-color: $white;
+    border-radius: 0px 20px 20px 20px;
+}
+.chat-right {
+    width: fit-content;
+    margin-top: 24px;
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 10px 24px 8px;
+    background-color: $bampYellow;
+    border-radius: 20px 0px 20px 20px;
+    text-align: right;
+    position: absolute;
+    right: 0px;
+}
+
+//인터뷰 영역
 .interview-area {
     max-width: 750px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     padding-bottom: 100px;
 }
@@ -126,10 +193,38 @@ $mobile: 768px;
         font-weight: 500;
     }
     h1{
-        margin-top: 12px;
+        margin: 12px auto 200px;
         font-size: 24px;
         font-weight: 700;
     }
+}
+.keyword-anchor-btns {
+    gap: 16px;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+}
+.anchor-btn {
+    padding: 10px 24px 8px;
+    border: 1.4px solid $bampYellow;
+    border-radius: 20px;
+    background-color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+.anchor-btn:hover {
+    background-color: $bampYellow;
+    color: $white;
+}
+.anchor-active {
+    color: $white;
+    background-color: $bampYellow;
+    border: 1.4px solid $bampYellow;
 }
 .interview {
     margin-top: 160px;
@@ -155,16 +250,8 @@ $mobile: 768px;
     font-size: 16px;
     line-height: 24px;
 }
-.interview-img {
+.interview-visual-content {
     margin-top: 40px;
-    img {
-        background-color: rgb(213, 213, 213);
-        width: 100%;
-        height: 448px;
-        border-radius: 10px;
-        border: none;
-        object-fit: cover;
-    }
     h6 {
         font-size: 16px;
         color: #999;
@@ -172,8 +259,27 @@ $mobile: 768px;
         text-align: center;
     }
 }
+.interview-img {
+    padding-top: 56.25%;
+    position: relative;
+    img {
+        position: absolute;
+        top: 0;
+        background-color: rgb(213, 213, 213);
+        width: 100%;
+        height: 100%;
+        // height: 448px;
+        border-radius: 10px;
+        border: none;
+        object-fit: cover;
+    }
+}
 .BAMP-SNS {
     margin: 160px auto 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 .SNS-img {
     display: flex;

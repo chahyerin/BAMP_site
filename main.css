@@ -8,10 +8,22 @@
   background-color: #fff;
   width: 100%;
   height: 100%;
-  z-index: 1000;
   position: absolute;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  top: 10%;
 }
 
 .intro-title h1 {
@@ -45,19 +57,22 @@
 }
 
 .active-box-line {
-  width: 140px;
-  height: 140px;
-  border-radius: 35px;
-  border: 3px solid #FFC800;
+  width: 88px;
+  height: 88px;
+  border-radius: 25px;
+  border: 2px solid #FFC800;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .active-box-line .profile-img {
-  width: 120px;
-  height: 120px;
-  margin: 10px auto;
+  width: 80px;
+  height: 80px;
+  margin: 4px auto;
   background-color: #FFC800;
-  border-radius: 30px;
-  cursor: pointer;
+  border-radius: 20px;
 }
 
 .user-name {
@@ -65,14 +80,32 @@
 }
 
 .user-name h5 {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.user-name .active-text-line {
+.active-text-line {
   margin: auto;
-  width: 70%;
+  width: 100%;
   height: 3px;
+  margin-top: 4px;
   background-color: #FFC800;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.profile {
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.profile:hover .active-text-line {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .enter-btn {
@@ -83,7 +116,7 @@
   color: #fff;
   border: none;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .enter-btn:hover {
@@ -91,15 +124,15 @@
 }
 
 .main-page {
-  visibility: hidden;
+  display: none;
 }
 
 .show {
-  visibility: visible;
+  display: initial;
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .header {
@@ -108,6 +141,7 @@
   height: 60px;
   left: 0px;
   top: 0px;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
@@ -124,14 +158,65 @@
 .chatting-area {
   max-width: 750px;
   width: 100%;
-  height: 800px;
   background-color: antiquewhite;
   margin: auto;
+  padding: 80px 20px 40px;
+  position: relative;
+}
+
+.chat-message {
+  text-align: center;
+}
+
+.chat-left {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chat-profile {
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  border-radius: 40px;
+}
+
+.chat-user-information {
+  margin-left: 10px;
+}
+
+.chat-user-information .chat-user-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.chat-box {
+  margin-top: 8px;
+  font-size: 16px;
+  padding: 10px 24px 8px;
+  background-color: #fff;
+  border-radius: 0px 20px 20px 20px;
+}
+
+.chat-right {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 24px;
+  margin-right: 20px;
+  font-size: 16px;
+  padding: 10px 24px 8px;
+  background-color: #FFC800;
+  border-radius: 20px 0px 20px 20px;
+  text-align: right;
+  position: absolute;
+  right: 0px;
 }
 
 .interview-area {
   max-width: 750px;
-  width: 100%;
+  width: 90%;
   margin: auto;
   padding-bottom: 100px;
 }
@@ -147,9 +232,48 @@
 }
 
 .interview-title h1 {
-  margin-top: 12px;
+  margin: 12px auto 200px;
   font-size: 24px;
   font-weight: 700;
+}
+
+.keyword-anchor-btns {
+  gap: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1000;
+}
+
+.anchor-btn {
+  padding: 10px 24px 8px;
+  border: 1.4px solid #FFC800;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.anchor-btn:hover {
+  background-color: #FFC800;
+  color: #fff;
+}
+
+.anchor-active {
+  color: #fff;
+  background-color: #FFC800;
+  border: 1.4px solid #FFC800;
 }
 
 .interview {
@@ -181,29 +305,47 @@
   line-height: 24px;
 }
 
-.interview-img {
+.interview-visual-content {
   margin-top: 40px;
 }
 
-.interview-img img {
-  background-color: #d5d5d5;
-  width: 100%;
-  height: 448px;
-  border-radius: 10px;
-  border: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.interview-img h6 {
+.interview-visual-content h6 {
   font-size: 16px;
   color: #999;
   margin: 12px auto 0px;
   text-align: center;
 }
 
+.interview-img {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.interview-img img {
+  position: absolute;
+  top: 0;
+  background-color: #d5d5d5;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .BAMP-SNS {
   margin: 160px auto 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .SNS-img {

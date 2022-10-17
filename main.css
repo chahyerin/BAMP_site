@@ -1,7 +1,7 @@
+@charset "UTF-8";
 * {
   margin: 0px;
-  -webkit-box-sizing: 0px;
-          box-sizing: 0px;
+  box-sizing: 0px;
 }
 
 .intro-page {
@@ -10,19 +10,10 @@
   height: 100%;
   position: absolute;
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -30,7 +21,6 @@
   font-size: 24px;
   font-weight: 700;
 }
-
 .intro-title h4 {
   margin-top: 12px;
   font-size: 16px;
@@ -40,19 +30,14 @@
 .choose-profile {
   margin-top: 80px;
 }
-
 .choose-profile h5 {
   font-size: 20px;
 }
 
 .profile-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 60px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 28px auto 0px;
 }
 
@@ -61,12 +46,8 @@
   height: 88px;
   border-radius: 25px;
   border: 2px solid #FFC800;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-
 .active-box-line .profile-img {
   width: 80px;
   height: 80px;
@@ -78,7 +59,6 @@
 .user-name {
   margin-top: 24px;
 }
-
 .user-name h5 {
   font-size: 16px;
   font-weight: 500;
@@ -90,12 +70,8 @@
   height: 3px;
   margin-top: 4px;
   background-color: #FFC800;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translateX(-100px);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .profile {
@@ -104,8 +80,7 @@
 }
 
 .profile:hover .active-text-line {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .enter-btn {
@@ -143,12 +118,10 @@
   top: 0px;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-
 .header img {
   margin: 15px auto;
   display: block;
@@ -166,27 +139,19 @@
 }
 
 .chat-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
   color: #999;
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
 }
-
 .chat-message h5 {
   width: 30%;
   text-align: center;
 }
-
 .chat-message hr {
   width: 35%;
   height: 0.5px;
@@ -194,8 +159,6 @@
 
 .chat-left {
   margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: -webkit-sticky;
   position: sticky;
@@ -212,7 +175,6 @@
 .chat-user-information {
   margin-left: 10px;
 }
-
 .chat-user-information .chat-user-name {
   font-size: 12px;
   font-weight: 500;
@@ -303,12 +265,10 @@
   text-align: center;
   margin-top: 120px;
 }
-
 .interview-title p {
   font-size: 16px;
   font-weight: 500;
 }
-
 .interview-title h1 {
   margin: 12px auto 200px;
   font-size: 24px;
@@ -320,14 +280,9 @@
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   z-index: 1000;
 }
 
@@ -341,8 +296,7 @@
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .anchor-btn:hover {
@@ -388,7 +342,6 @@
 .interview-visual-content {
   margin-top: 40px;
 }
-
 .interview-visual-content h6 {
   font-size: 14px;
   font-weight: 400;
@@ -401,11 +354,10 @@
   padding-top: 56.25%;
   position: relative;
 }
-
 .interview-img img {
   position: absolute;
   top: 0;
-  background-color: #d5d5d5;
+  background-color: rgb(213, 213, 213);
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -416,22 +368,13 @@
 
 .BAMP-SNS {
   margin: 160px auto 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
 .SNS-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 32px auto;
   gap: 20px;
@@ -443,7 +386,6 @@
   height: 60px;
   border-radius: 50px;
 }
-
 .icon-img img {
   display: block;
   margin: 14px auto;
@@ -453,14 +395,35 @@
   margin-top: 60px;
   text-align: center;
 }
-
 .donation h6 {
   margin-top: 12px;
   font-size: 14px;
   color: #999;
 }
-
 .donation p {
   margin-top: 20px;
 }
-/*# sourceMappingURL=main.css.map */
+
+/* Mobile부분 CSS */
+@media screen and (max-width: 768px) {
+  .chatting-area {
+    width: 95%;
+    padding: 80px 15px 40px;
+  }
+  .chat-message {
+    gap: 10px;
+  }
+  .chat-message h5 {
+    width: 100%;
+  }
+  .chat-box {
+    font-size: 13px;
+    margin-right: 20px;
+    padding: 10px 15px 8px;
+  }
+  .chat-right {
+    font-size: 13px;
+    margin: 24px 5px 0px auto;
+    padding: 10px 15px 8px;
+  }
+}/*# sourceMappingURL=main.css.map */

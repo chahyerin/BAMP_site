@@ -38,6 +38,7 @@ $(window).scroll(function(){
     if (height >= 980) {
         document.querySelector('.chat10').style.opacity = "1";
     } else { document.querySelector('.chat10').style.opacity = "0"; }
+
 })
 
 $(window).scroll(function(){

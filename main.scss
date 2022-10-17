@@ -269,6 +269,7 @@ $mobile: 768px;
     padding: 10px 24px 8px;
     border: 1.4px solid $bampYellow;
     border-radius: 20px;
+    color: $black;
     background-color: $white;
     font-size: 14px;
     font-weight: 500;
@@ -356,28 +357,15 @@ $mobile: 768px;
         margin: 14px auto;
     }
 }
-
-
-/* Mobile부분 CSS */
-@media screen and (max-width: 768px){
-    .chatting-area{
-        width: 95%;
-        padding: 80px 15px 40px;
+.donation {
+    margin-top: 60px;
+    text-align: center;
+    h6 {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #999;
     }
-    .chat-message{
-        gap: 10px;
+    p {
+        margin-top: 20px;
     }
-    .chat-message h5{
-        width: 100%;
-    }
-    .chat-box{
-        font-size: 13px;
-        margin-right: 20px;
-        padding: 10px 15px 8px;
-    }
-    .chat-right{
-        font-size: 13px;
-        margin: 24px 5px 0px auto;
-        padding: 10px 15px 8px;
-    }
-  }
+}

@@ -371,7 +371,7 @@ $mobile: 768px;
 }
 
 /* Mobile부분 CSS */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
     .chatting-area {
       width: 95%;
       padding: 80px 15px 40px;
@@ -383,13 +383,13 @@ $mobile: 768px;
       width: 100%;
     }
     .chat-box {
-      font-size: 13px;
+      font-size: 14px;
       margin-right: 20px;
-      padding: 10px 15px 8px;
+      padding: 10px 16px 8px;
     }
     .chat-right {
-      font-size: 13px;
+      font-size: 14px;
       margin: 24px 5px 0px auto;
-      padding: 10px 15px 8px;
+      padding: 10px 16px 8px;
     }
   }

@@ -355,6 +355,7 @@ $mobile: 768px;
     img {
         display: block;
         margin: 14px auto;
+        object-fit: cover;
     }
 }
 .donation {
@@ -364,9 +365,7 @@ $mobile: 768px;
         margin-top: 12px;
         font-size: 14px;
         color: #999;
-    }
-    p {
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 

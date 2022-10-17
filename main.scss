@@ -269,7 +269,6 @@ $mobile: 768px;
     padding: 10px 24px 8px;
     border: 1.4px solid $bampYellow;
     border-radius: 20px;
-    color: $black;
     background-color: $white;
     font-size: 14px;
     font-weight: 500;
@@ -355,26 +354,5 @@ $mobile: 768px;
     img {
         display: block;
         margin: 14px auto;
-    }
-}
-.donation {
-    margin-top: 60px;
-    text-align: center;
-    h6 {
-        margin-top: 12px;
-        font-size: 14px;
-        color: #999;
-    }
-    p {
-        margin-top: 20px;
-    }
-}
-
-// mobile 부분 css
-
-@media screen and (max-width: 768px){
-    .chatting-area{
-        width: 90%;
-        padding: 80px 15px 40px;
     }
 }

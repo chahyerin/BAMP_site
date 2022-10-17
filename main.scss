@@ -132,18 +132,34 @@ $mobile: 768px;
 .chatting-area {
     max-width: 750px;
     width: 100%;
+    height: 3000px;
     background-color: #FFF2C4;
     margin: auto;
     padding: 80px 20px 40px;
     position: relative;
-
 }
 .chat-message {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #999;
+    position: sticky;
+    top: 80px;
+    h5 {
+        width: 30%;
+        text-align: center;
+    }
+    hr {
+        width: 35%;
+        height: 0.5px;
+    }
 }
 .chat-left {
     margin-top: 24px;
     display: flex;
+    position: sticky;
+    opacity: 0;
 }
 .chat-profile {
     width: 40px;
@@ -167,15 +183,57 @@ $mobile: 768px;
 }
 .chat-right {
     width: fit-content;
-    margin-top: 24px;
-    margin-right: 20px;
+    margin: 24px 0px 0px auto;
     font-size: 16px;
     padding: 10px 24px 8px;
     background-color: $bampYellow;
     border-radius: 20px 0px 20px 20px;
     text-align: right;
-    position: absolute;
     right: 0px;
+    position: sticky;
+    opacity: 0;
+}
+
+//스크롤시 채팅 나타나게 위치 잡기
+.chat1 {
+    margin-top: 140px;
+    top: 116px;
+}
+.chat2 {
+    margin-top: 100px;
+    top: 200px;
+}
+.chat3 {
+    margin-top: 140px;
+    top: 284px;
+}
+.chat4 {
+    margin-top: 120px;
+    top: 365px;
+}
+.chat5 {
+    margin-top: 120px;
+    top: 449px;
+}
+.chat6 {
+    margin-top: 120px;
+    top: 533px;
+}
+.chat7 {
+    margin-top: 120px;
+    top: 617px;
+}
+.chat8 {
+    margin-top: 120px;
+    top: 701px;
+}
+.chat9 {
+    margin-top: 120px;
+    top: 785px;
+}
+.chat10 {
+    margin-top: 120px;
+    top: 882px;
 }
 
 //인터뷰 영역
@@ -214,6 +272,7 @@ $mobile: 768px;
     background-color: $white;
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }

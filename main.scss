@@ -369,27 +369,3 @@ $mobile: 768px;
         margin-top: 20px;
     }
 }
-
-/* Mobile부분 CSS */
-@media screen and (max-width: $mobile) {
-    .chatting-area {
-      width: 95%;
-      padding: 80px 15px 40px;
-    }
-    .chat-message {
-      gap: 10px;
-    }
-    .chat-message h5 {
-      width: 100%;
-    }
-    .chat-box {
-      font-size: 14px;
-      margin-right: 20px;
-      padding: 10px 16px 8px;
-    }
-    .chat-right {
-      font-size: 14px;
-      margin: 24px 5px 0px auto;
-      padding: 10px 16px 8px;
-    }
-  }

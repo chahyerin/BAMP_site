@@ -335,6 +335,7 @@
   padding: 10px 24px 8px;
   border: 1.4px solid #FFC800;
   border-radius: 20px;
+  color: #000;
   background-color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -446,5 +447,20 @@
 .icon-img img {
   display: block;
   margin: 14px auto;
+}
+
+.donation {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.donation h6 {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #999;
+}
+
+.donation p {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */

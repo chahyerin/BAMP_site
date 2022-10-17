@@ -132,7 +132,7 @@ $mobile: 768px;
 .chatting-area {
     max-width: 750px;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: #FFF2C4;
     margin: auto;
     padding: 80px 20px 40px;
     position: relative;
@@ -253,9 +253,10 @@ $mobile: 768px;
 .interview-visual-content {
     margin-top: 40px;
     h6 {
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 400;
         color: #999;
-        margin: 12px auto 0px;
+        margin: 16px auto 0px;
         text-align: center;
     }
 }

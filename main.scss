@@ -369,3 +369,12 @@ $mobile: 768px;
         margin-top: 20px;
     }
 }
+
+// mobile 부분 css
+
+@media screen and (max-width: 768px){
+    .chatting-area{
+        width: 90%;
+        padding: 80px 15px 40px;
+    }
+}

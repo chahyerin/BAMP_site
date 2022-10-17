@@ -1,7 +1,23 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "기본체";
+  src: url(./source/font/NotoSansKR-Regular.otf);
+}
+@font-face {
+  font-family: "볼드체";
+  src: url(./source/font/NotoSansKR-Bold.otf);
+}
 * {
   margin: 0px;
   box-sizing: 0px;
+}
+
+body {
+  font-family: "기본체";
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: "볼드체";
 }
 
 .intro-page {

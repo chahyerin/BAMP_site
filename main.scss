@@ -20,7 +20,6 @@ $mobile: 768px;
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 .intro-title {
     h1 {
@@ -33,6 +32,61 @@ $mobile: 768px;
         font-size: 300;
     }
 }
+
+//마지막
+.intro-radio {
+    opacity: 0;
+}
+.active-text-line {
+    margin: auto;
+    width: 100%;
+    height: 3px;
+    margin-top: 4px;
+    background-color: $bampYellow;
+    transform: translateX(-100px);
+    transition: transform 0.3s;
+}
+.profile:hover {
+    .active-text-line {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.profile {
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.profile-bamp>label {
+    opacity: 0.3;
+}
+.profile input[type=radio]:checked + label {
+    .profile-bamp>label {
+        opacity: 1;
+    }
+}
+.user-name {
+    margin-top: 24px;
+    h5{
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.6;
+    }
+}
+
+
+.radio-test>label {
+    opacity: 0;
+    
+}
+
+
+
+
+
+
+
+
+
 .choose-profile {
     margin-top: 80px;
     h5 {
@@ -48,24 +102,30 @@ $mobile: 768px;
 .active-box-line { // 라디오 버튼으로 변경하기 
     width: 88px;
     height: 88px;
+    opacity: 0;
     border-radius: 25px;
     border: 2px solid $bampYellow;
     transition: transform 0.3s;
-    .profile-img {
-        width: 80px;
-        height: 80px;
-        margin: 4px auto;
-        background-color: $bampYellow;
-        border-radius: 20px;
+}
+.profile-img {
+    width: 80px;
+    height: 80px;
+    opacity: 0.6;
+    margin: 4px auto;
+    background-color: $bampYellow;
+    border-radius: 20px;
+    img {
+        width: 100%;
     }
 }
-.user-name {
-    margin-top: 24px;
-    h5{
-        font-size: 16px;
-        font-weight: 500;
-    }
-}
+// .user-name {
+//     margin-top: 24px;
+//     h5{
+//         font-size: 16px;
+//         font-weight: 500;
+//         opacity: 0.6;
+//     }
+// }
 .active-text-line {
     margin: auto;
     width: 100%;
@@ -75,15 +135,26 @@ $mobile: 768px;
     transform: translateX(-100px);
     transition: transform 0.3s;
 }
-.profile {
-    overflow-x: hidden;
-    cursor: pointer;
-}
-.profile:hover {
-    .active-text-line {
-        transform: translateX(0px);
-    }
-}
+
+// .profile:hover {
+//     .active-box-line {opacity: 1;}
+//     .profile-img {opacity: 1;}
+//     .user-name h5 {opacity: 1;}
+//     .active-text-line {
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+// .profile:focus {
+//     .active-box-line {opacity: 0;}
+//     .profile-img {opacity: 1;}
+//     .user-name h5 {opacity: 1;}
+//     .active-text-line {
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+
 .enter-btn {
     margin-top: 68px;
     padding: 12px 80px 10px;

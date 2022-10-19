@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    box-sizing: 0px;
+}
+
+//font
+@font-face{
+    font-family: 'regular';
+    src: url(./source/font/NotoSansKR-Regular.otf)
+  }
+@font-face{
+    font-family: 'bold';
+    src: url(./source/font/NotoSansKR-Bold.otf);
+}
+
+body {
+    font-family: 'regular';
+    letter-spacing: -0.25px;
+}
+h1,h2,h3,h4,h5,h6,strong{font-family: 'bold';}
+
+
+//color
+$white: #fff;
+$gray1: #999;
+$gray2: #777;
+$gray3: #555;
+$gray4: #333;
+$black: #000;
+$bampYellow: #FFC800;
+$red: #e43121;
+$blue: #3AB4F2;
+$brown: #524740;
+//effect
+$shadow: 0px 4px 10px rgba(0,0,0,0.1);
+//view
+$mobile: 768px;

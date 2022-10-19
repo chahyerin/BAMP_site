@@ -1,14 +1,4 @@
-* {
-    margin: 0px;
-    box-sizing: 0px;
-}
-
-$white: #fff;
-$black: #000;
-$bampYellow: #FFC800;
-$brown: #524740;
-
-$mobile: 768px;
+@import '_all.scss';
 
 .intro-page {
     width: 100%;
@@ -21,53 +11,60 @@ $mobile: 768px;
     text-align: center;
     // 배경 이미지
     background-color: rgba($color: $black, $alpha: 0.6);
-    background-image: url("source/intro/intro-background.png");
+    background-image: url("../source/intro/intro-background.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-blend-mode: darken;
 }
 .intro-title {
     color: $white;
     h1 {
         font-size: 28px;
-        font-weight: 700;
     }
-    h4 {
+    .intro-description {
+        color: $gray1;
         margin-top: 12px;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 'regular';
+        line-height: 24px;
+    }
+    p {
+        margin-top: 12px;
+        color: $white;
+        font-size: 18px;
+        font-weight: 'bold';
     }
 }
 .choose-profile {
     margin-top: 60px;
     .profile-title {
         text-align: center;
-        margin: auto;
+        margin: auto;   
         color: $brown;
         font-size: 16px;
         width: 60%;
-        padding: 6px 8px;
+        padding: 6px 8px 4px;
         border-radius: 30px;
         background-color: $bampYellow;
     }
 }        
 .profile-box {
     display: flex;
-    gap: 60px;
+    gap: 48px;
     justify-content: center;
     margin: 40px auto 0px;
 }
 .profile {
     overflow-x: hidden;
 }
-input[type=radio] { display:none;  margin:10px; } 
-
+input[type=radio] { 
+    display:none;  
+    margin:10px; 
+} 
 input[type=radio] + label { 
     display:inline-block; 
     cursor: pointer;
     text-align: center; 
-    opacity: 0.6;
 } 
 
 .profile-img {
@@ -98,10 +95,30 @@ input[type=radio] + label {
 }
 .profile:hover {
     .profile-img {border: 3px solid $bampYellow;}
-    input[type=radio] + label {opacity: 1;}
     .active-text-line {
         transform: translateX(0px);
     }
+}
+
+input[type=radio]:checked + label { 
+    .profile-img {border: 3px solid $bampYellow;}
+    .active-text-line {
+        transform: translateX(0px);
+    }
+} 
+.error {
+    font-size: 14px;
+    color: $red;
+    font-weight: 'bold';
+    margin-top: 12px;
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height 0.3s;
+}
+.error-show {
+    visibility: visible;
+    height: 20px;
 }
 
 .enter-btn {
@@ -113,9 +130,11 @@ input[type=radio] + label {
     border: none;
     font-size: 24px;
     font-weight: 700;
+    transition: transform 0.3s;
 }
 .enter-btn:hover {
     cursor: pointer;
+    transform: scale(0.95);
 }
 
 //메인페이지 
@@ -369,6 +388,7 @@ input[type=radio] + label {
 }
 .icon-img {
     background-color: #ffc800;
+    cursor: pointer;
     width: 60px;
     height: 60px;
     border-radius: 50px;

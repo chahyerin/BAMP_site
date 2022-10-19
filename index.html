@@ -12,22 +12,23 @@
     <meta property="og:description" content="국내최초 대학생 공모전 연합동아리">
     <meta property="og:title" content="BAMP">
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" href="source/bamp_symbol.svg" type="image/x-icon">
 </head>
 <body>
     <div class="intro-page">
         <div class="intro-title">
-            <h1>BAMP</h1>
-            <h4>밤프 궁금해서 오셨구나? 그런데 이걸 어떡해? 우리는 우리가 소개 안해! <br> 그동안 밤프를 거쳐갔던 사람들에게 물었습니다! 
-            <br>"나에게 밤프란?"</h4>
+            <h1> <img src="source/bamp_white_logo.svg" alt="BAMP"></h1>
+            <div class="intro-description">밤프 궁금해서 오셨구나? 그런데 이걸 어떡해? 우리는 우리가 소개 안해! <br> 그동안 밤프를 거쳐갔던 사람들에게 물었습니다! 
+            </div>
+            <p>"나에게 밤프란?"</p>
         </div>
         <div class="choose-profile">
             <h5 class="profile-title">프로필 선택하기</h5>
             
             <div class="profile-box">
                 <div class="profile">
-                    <input type="radio" name="person" class="intro-radio profile-bamp" id="radio1">
+                    <input type="radio" name="person" class="intro-radio profile-bamp" id="radio1" value="밤프인">
                     <label for="radio1">
                         <div class="profile-img-box">
                             <div class="profile-img"><img src="source/intro/profile_bamp.svg" alt="밤프인"></div>
@@ -39,10 +40,10 @@
                     </label>
                 </div>
                 <div class="profile">
-                    <input type="radio" name="person" class="intro-radio profile-spare-bamp" id="radio2">
+                    <input type="radio" name="person" class="intro-radio profile-spare-bamp" id="radio2" value="예비 밤프인">
                     <label for="radio2">
                         <div class="profile-img-box">
-                            <div class="profile-img"><img src="source/intro/profile_spare_bamp.svg" alt="밤프인"></div>
+                            <div class="profile-img"><img src="source/intro/profile_spare_bamp.svg" alt="예비 밤프인"></div>
                         </div>
                         <div class="user-name">
                             <h5>예비 밤프인</h5>
@@ -52,6 +53,8 @@
                 </div>
             </div>
             <button class="enter-btn">입장하기</button>
+            <h5 class="error message-profile">🚨 프로필을 선택해주세요</h5>
+            <h5 id="result"></h5>
         </div>
     </div>
 
@@ -62,7 +65,7 @@
 
         <div class="chatting-area">
                 <div class="chat-message">
-                    <hr><h5>예비 밤프인님께서 입장하셨습니다.</h5><hr>
+                    <hr><h5> <span class="selected-profile">예비 밤프인</span>님께서 입장하셨습니다.</h5><hr>
                 </div>
                 <div class="chat-left chat1">
                     <div class="chat-profile">
@@ -287,16 +290,19 @@
                 <h4>밤프는 지금 어떤 활동을 하고 있을까?</h4>
                 <div class="SNS-img">
                     <div class="icon-img">
-                        <a href="https://www.instagram.com/gobamp/?hl=ko" target="_blank" rel="noreferrer noopener"></a>
-                        <img src="source/bamp_symbol.svg" alt="인스타그램"><tg23 class="0"></tg23>
+                        <a href="https://www.instagram.com/gobamp/?hl=ko" target="_blank" rel="noreferrer noopener">
+                            <img src="source/bamp_symbol.svg" alt="인스타그램">
+                        </a>
                     </div>
                     <div class="icon-img">
-                        <a href="https://m.blog.naver.com/12bamp" target="_blank" rel="noreferrer noopener"></a>
-                        <img src="source/bamp_symbol.svg" alt="블로그">
+                        <a href="https://m.blog.naver.com/12bamp" target="_blank" rel="noreferrer noopener">
+                            <img src="source/bamp_symbol.svg" alt="블로그">
+                        </a>
                     </div>
                     <div class="icon-img">
-                        <a href="https://www.youtube.com/channel/UCM5qLB3hB8L9zAb4GN2mSDQ" target="_blank" rel="noreferrer noopener"></a>
-                        <img src="source/bamp_symbol.svg" alt="유튜브">
+                        <a href="https://www.youtube.com/channel/UCM5qLB3hB8L9zAb4GN2mSDQ" target="_blank" rel="noreferrer noopener">
+                            <img src="source/bamp_symbol.svg" alt="유튜브">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -137,6 +137,15 @@ input[type=radio]:checked + label {
     transform: scale(0.95);
 }
 
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 'regular';
+    color: $gray2;
+    position: absolute;
+    bottom: 20px;
+}
+
 //메인페이지 
 .main-page {
     display: none;
@@ -320,13 +329,13 @@ input[type=radio]:checked + label {
     background-color: $bampYellow;
     color: $white;
 }
-.anchor-active {
+.anchor-focus {
     color: $white;
     background-color: $bampYellow;
     border: 1.4px solid $bampYellow;
 }
 .interview {
-    margin-top: 160px;
+    padding-top: 180px;
 }
 .interview-keyword {
     font-size: 32px;

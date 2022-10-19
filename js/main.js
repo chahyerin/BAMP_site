@@ -49,3 +49,43 @@ $(window).scroll(function(){
     } else { document.querySelector('.chat10').style.opacity = "0"; }
 
 })
+
+//앵커버튼 focus 설정
+for (let i = 0; i < $('.anchor-btn').length; i++){
+    $('.anchor-btn').eq(i).on('click', function(){
+      $('.anchor-btn').removeClass('anchor-focus');
+      $('.anchor-btn').eq(i).addClass('anchor-focus');
+    })
+};
+
+//앵커버튼 위치 이동
+$(document).ready(function(){		
+    $('#keyword1').click(function(){			
+        var offset = $('#interview1').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword2').click(function(){			
+        var offset = $('#interview2').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword3').click(function(){			
+        var offset = $('#interview3').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword4').click(function(){			
+        var offset = $('#interview4').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword5').click(function(){			
+        var offset = $('#interview5').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword6').click(function(){			
+        var offset = $('#interview6').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+    $('#keyword7').click(function(){			
+        var offset = $('#interview7').offset();
+        $('html').animate({scrollTop : offset.top}, 400);		
+    });	
+});

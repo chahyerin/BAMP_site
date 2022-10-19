@@ -204,6 +204,15 @@ input[type=radio]:checked + label .active-text-line {
           transform: scale(0.95);
 }
 
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 'regular';
+  color: #777;
+  position: absolute;
+  bottom: 20px;
+}
+
 .main-page {
   display: none;
 }
@@ -431,14 +440,14 @@ input[type=radio]:checked + label .active-text-line {
   color: #fff;
 }
 
-.anchor-active {
+.anchor-focus {
   color: #fff;
   background-color: #FFC800;
   border: 1.4px solid #FFC800;
 }
 
 .interview {
-  margin-top: 160px;
+  padding-top: 180px;
 }
 
 .interview-keyword {

@@ -6,93 +6,113 @@
 $white: #fff;
 $black: #000;
 $bampYellow: #FFC800;
+$brown: #524740;
 
 $mobile: 768px;
 
 .intro-page {
-    background-color: $white;
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    // 배경 이미지
+    background-color: rgba($color: $black, $alpha: 0.6);
+    background-image: url("source/intro/intro-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
 }
 .intro-title {
+    color: $white;
     h1 {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
     }
     h4 {
         margin-top: 12px;
         font-size: 16px;
-        font-size: 300;
+        font-weight: 400;
     }
 }
 .choose-profile {
-    margin-top: 80px;
-    h5 {
-        font-size: 20px;
+    margin-top: 60px;
+    .profile-title {
+        text-align: center;
+        margin: auto;
+        color: $brown;
+        font-size: 16px;
+        width: 60%;
+        padding: 6px 8px;
+        border-radius: 30px;
+        background-color: $bampYellow;
     }
-}
+}        
 .profile-box {
     display: flex;
     gap: 60px;
     justify-content: center;
-    margin: 28px auto 0px;
-}
-.active-box-line { // 라디오 버튼으로 변경하기 
-    width: 88px;
-    height: 88px;
-    border-radius: 25px;
-    border: 2px solid $bampYellow;
-    transition: transform 0.3s;
-    .profile-img {
-        width: 80px;
-        height: 80px;
-        margin: 4px auto;
-        background-color: $bampYellow;
-        border-radius: 20px;
-    }
-}
-.user-name {
-    margin-top: 24px;
-    h5{
-        font-size: 16px;
-        font-weight: 500;
-    }
-}
-.active-text-line {
-    margin: auto;
-    width: 100%;
-    height: 3px;
-    margin-top: 4px;
-    background-color: $bampYellow;
-    transform: translateX(-100px);
-    transition: transform 0.3s;
+    margin: 40px auto 0px;
 }
 .profile {
     overflow-x: hidden;
+}
+input[type=radio] { display:none;  margin:10px; } 
+
+input[type=radio] + label { 
+    display:inline-block; 
     cursor: pointer;
+    text-align: center; 
+    opacity: 0.6;
+} 
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+    border-radius: 25px;
+    border: 3px solid rgba($color: $bampYellow, $alpha: 0);
+    img {
+        width: 100%;
+    }
+}
+.user-name {
+    margin-top: 20px;
+    h5 {
+        color: $white;
+        font-size: 16px;
+        text-align: center;
+    }
+    .active-text-line {
+        width: 100%;
+        height: 3px;
+        margin-top: 4px;
+        background-color: $bampYellow;
+        transform: translateX(-100px);
+        transition: transform 0.3s;
+    }
 }
 .profile:hover {
+    .profile-img {border: 3px solid $bampYellow;}
+    input[type=radio] + label {opacity: 1;}
     .active-text-line {
         transform: translateX(0px);
     }
 }
+
 .enter-btn {
-    margin-top: 68px;
-    padding: 12px 80px 10px;
+    margin-top: 48px;
+    padding: 12px 60px 10px;
     border-radius: 10px;
     background-color: $bampYellow;
-    color: $white;
+    color: $brown;
     border: none;
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
 }
 .enter-btn:hover {
     cursor: pointer;
@@ -369,3 +389,27 @@ $mobile: 768px;
         margin-top: 20px;
     }
 }
+
+/* Mobile부분 CSS */
+@media screen and (max-width: $mobile) {
+    .chatting-area {
+      width: 95%;
+      padding: 80px 15px 40px;
+    }
+    .chat-message {
+      gap: 10px;
+    }
+    .chat-message h5 {
+      width: 100%;
+    }
+    .chat-box {
+      font-size: 14px;
+      margin-right: 20px;
+      padding: 10px 16px 8px;
+    }
+    .chat-right {
+      font-size: 14px;
+      margin: 24px 5px 0px auto;
+      padding: 10px 16px 8px;
+    }
+  }

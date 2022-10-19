@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+    <div class="intro-page">
+        <div class="intro-title">
+            <h1>BAMP</h1>
+            <h4>밤프 궁금해서 오셨구나? 그런데 이걸 어떡해? 우리는 우리가 소개 안해! <br> 그동안 밤프를 거쳐갔던 사람들에게 물었습니다! 
+            <br>"나에게 밤프란?"</h4>
+        </div>
     <div class="choose-profile">
-        <h5>프로필 선택하기</h5>
-        <!-- last profile -->
+        <h5 class="profile-title">프로필 선택하기</h5>
+        
         <div class="profile-box">
             <div class="profile">
                 <input type="radio" name="person" class="intro-radio profile-bamp" id="radio1">
                 <label for="radio1">
                     <div class="profile-img-box">
-                        <div class="active-box-line"></div>
                         <div class="profile-img"><img src="source/intro/profile_bamp.svg" alt="밤프인"></div>
                     </div>
                     <div class="user-name">
@@ -29,7 +34,6 @@
                 <input type="radio" name="person" class="intro-radio profile-spare-bamp" id="radio2">
                 <label for="radio2">
                     <div class="profile-img-box">
-                        <div class="active-box-line"></div>
                         <div class="profile-img"><img src="source/intro/profile_spare_bamp.svg" alt="밤프인"></div>
                     </div>
                     <div class="user-name">
@@ -39,5 +43,7 @@
                 </label>
             </div>
         </div>
+        <button class="enter-btn">입장하기</button>
+    </div>
 </body>
 </html>

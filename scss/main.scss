@@ -41,8 +41,8 @@
         text-align: center;
         margin: auto;   
         color: $brown;
-        font-size: 16px;
-        width: 60%;
+        font-size: 14px;
+        width: 50%;
         padding: 6px 8px 4px;
         border-radius: 30px;
         background-color: $bampYellow;
@@ -52,7 +52,7 @@
     display: flex;
     gap: 48px;
     justify-content: center;
-    margin: 40px auto 0px;
+    margin: 32px auto 0px;
 }
 .profile {
     overflow-x: hidden;
@@ -177,14 +177,18 @@ input[type=radio]:checked + label {
 }
 
 //채팅 영역
+.chatting-background {
+    width: 100%;
+    background-color: #f9f5ea;
+    overflow-y: hidden;
+}
 .chatting-area {
     max-width: 750px;
     width: 100%;
-    height: 3000px;
     background-color: #FFF2C4;
     margin: auto;
     padding: 80px 20px 40px;
-    position: relative;
+    box-shadow: $shadow;
 }
 .chat-message {
     display: flex;
@@ -192,7 +196,6 @@ input[type=radio]:checked + label {
     justify-content: center;
     gap: 20px;
     color: #999;
-    position: sticky;
     top: 80px;
     h5 {
         width: 30%;
@@ -206,7 +209,6 @@ input[type=radio]:checked + label {
 .chat-left {
     margin-top: 24px;
     display: flex;
-    position: sticky;
     opacity: 0;
 }
 .chat-profile {
@@ -214,6 +216,11 @@ input[type=radio]:checked + label {
     height: 40px;
     background-color: #999;
     border-radius: 40px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .chat-user-information {
     margin-left: 10px;
@@ -238,50 +245,10 @@ input[type=radio]:checked + label {
     border-radius: 20px 0px 20px 20px;
     text-align: right;
     right: 0px;
-    position: sticky;
     opacity: 0;
 }
-
-//스크롤시 채팅 나타나게 위치 잡기
-.chat1 {
-    margin-top: 140px;
-    top: 116px;
-}
-.chat2 {
-    margin-top: 100px;
-    top: 200px;
-}
-.chat3 {
-    margin-top: 140px;
-    top: 284px;
-}
-.chat4 {
-    margin-top: 120px;
-    top: 365px;
-}
-.chat5 {
-    margin-top: 120px;
-    top: 449px;
-}
-.chat6 {
-    margin-top: 120px;
-    top: 533px;
-}
-.chat7 {
-    margin-top: 120px;
-    top: 617px;
-}
-.chat8 {
-    margin-top: 120px;
-    top: 701px;
-}
-.chat9 {
-    margin-top: 120px;
-    top: 785px;
-}
-.chat10 {
-    margin-top: 120px;
-    top: 882px;
+.chat-show {
+    opacity: 1;
 }
 
 //인터뷰 영역
@@ -293,8 +260,12 @@ input[type=radio]:checked + label {
 }
 .interview-title {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 200px;
+    img {
+        width: 240px;
+    }
     p {
+        margin-top: 28px;
         font-size: 16px;
         font-weight: 500;
     }
@@ -384,7 +355,7 @@ input[type=radio]:checked + label {
     }
 }
 .BAMP-SNS {
-    margin: 160px auto 0px;
+    margin: 120px auto 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,8 +368,8 @@ input[type=radio]:checked + label {
 }
 .icon-img {
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border-radius: 50px;
     transition: transform 0.3s;
     img {

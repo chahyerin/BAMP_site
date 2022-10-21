@@ -80,8 +80,8 @@ h1, h2, h3, h4, h5, h6, strong {
   text-align: center;
   margin: auto;
   color: #524740;
-  font-size: 16px;
-  width: 60%;
+  font-size: 14px;
+  width: 50%;
   padding: 6px 8px 4px;
   border-radius: 30px;
   background-color: #FFC800;
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6, strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 40px auto 0px;
+  margin: 32px auto 0px;
 }
 
 .profile {
@@ -245,14 +245,20 @@ input[type=radio]:checked + label .active-text-line {
   height: 30px;
 }
 
+.chatting-background {
+  width: 100%;
+  background-color: #f9f5ea;
+  overflow-y: hidden;
+}
+
 .chatting-area {
   max-width: 750px;
   width: 100%;
-  height: 3000px;
   background-color: #FFF2C4;
   margin: auto;
   padding: 80px 20px 40px;
-  position: relative;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-message {
@@ -267,8 +273,6 @@ input[type=radio]:checked + label .active-text-line {
           justify-content: center;
   gap: 20px;
   color: #999;
-  position: -webkit-sticky;
-  position: sticky;
   top: 80px;
 }
 
@@ -287,8 +291,6 @@ input[type=radio]:checked + label .active-text-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
   opacity: 0;
 }
 
@@ -297,6 +299,13 @@ input[type=radio]:checked + label .active-text-line {
   height: 40px;
   background-color: #999;
   border-radius: 40px;
+}
+
+.chat-profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .chat-user-information {
@@ -327,59 +336,11 @@ input[type=radio]:checked + label .active-text-line {
   border-radius: 20px 0px 20px 20px;
   text-align: right;
   right: 0px;
-  position: -webkit-sticky;
-  position: sticky;
   opacity: 0;
 }
 
-.chat1 {
-  margin-top: 140px;
-  top: 116px;
-}
-
-.chat2 {
-  margin-top: 100px;
-  top: 200px;
-}
-
-.chat3 {
-  margin-top: 140px;
-  top: 284px;
-}
-
-.chat4 {
-  margin-top: 120px;
-  top: 365px;
-}
-
-.chat5 {
-  margin-top: 120px;
-  top: 449px;
-}
-
-.chat6 {
-  margin-top: 120px;
-  top: 533px;
-}
-
-.chat7 {
-  margin-top: 120px;
-  top: 617px;
-}
-
-.chat8 {
-  margin-top: 120px;
-  top: 701px;
-}
-
-.chat9 {
-  margin-top: 120px;
-  top: 785px;
-}
-
-.chat10 {
-  margin-top: 120px;
-  top: 882px;
+.chat-show {
+  opacity: 1;
 }
 
 .interview-area {
@@ -391,10 +352,15 @@ input[type=radio]:checked + label .active-text-line {
 
 .interview-title {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 200px;
+}
+
+.interview-title img {
+  width: 240px;
 }
 
 .interview-title p {
+  margin-top: 28px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -505,7 +471,7 @@ input[type=radio]:checked + label .active-text-line {
 }
 
 .BAMP-SNS {
-  margin: 160px auto 0px;
+  margin: 120px auto 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,8 +495,8 @@ input[type=radio]:checked + label .active-text-line {
 
 .icon-img {
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
   border-radius: 50px;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;

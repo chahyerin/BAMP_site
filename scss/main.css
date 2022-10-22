@@ -337,8 +337,13 @@ input[type=radio]:checked + label .active-text-line {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.swiper-slide {
+  width: auto !important;
 }
 
 .anchor-btn:hover {
@@ -448,6 +453,15 @@ input[type=radio]:checked + label .active-text-line {
 }
 .donation p {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .keyword-anchor-btns {
+    width: 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
 }
 
 /* Mobile부분 CSS */

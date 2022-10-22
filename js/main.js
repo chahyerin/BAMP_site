@@ -1,3 +1,11 @@
+//엥커버튼 스와이프 라이브러리 
+const swiper = new Swiper('.swiper', {
+    spaceBetween: 20,
+    slidesPerView: 'auto'
+});
+
+
+//인트로 페이지 버튼 이벤트 (프로필 선택, 에러메세지)
 $('.enter-btn').click(function(e){
     var listVar = $('input[name=person]:checked').val();
     
@@ -11,38 +19,17 @@ $('.enter-btn').click(function(e){
     }
 })
 
-//채팅 보여주기 
-$('.enter-btn').click(function(e){
-    setTimeout(function Timer () {
-        document.querySelector('.chat1').classList.add('chat-show'); 
-    }, 400);
-    setTimeout(function Timer () {
-        document.querySelector('.chat2').classList.add('chat-show'); 
-    }, 800);
-    setTimeout(function Timer () {
-        document.querySelector('.chat3').classList.add('chat-show'); 
-    }, 1700);
-    setTimeout(function Timer () {
-        document.querySelector('.chat4').classList.add('chat-show'); 
-    }, 3400);
-    setTimeout(function Timer () {
-        document.querySelector('.chat5').classList.add('chat-show'); 
-    }, 4000);
-    setTimeout(function Timer () {
-        document.querySelector('.chat6').classList.add('chat-show'); 
-    }, 4600);
-    setTimeout(function Timer () {
-        document.querySelector('.chat7').classList.add('chat-show'); 
-    }, 5600);
-    setTimeout(function Timer () {
-        document.querySelector('.chat8').classList.add('chat-show'); 
-    }, 6400);
-    setTimeout(function Timer () {
-        document.querySelector('.chat9').classList.add('chat-show'); 
-    }, 7000);
-    setTimeout(function Timer () {
-        document.querySelector('.chat10').classList.add('chat-show'); 
-    }, 8000);
+//입장하기 버튼 클릭 시 채팅 보여주기 
+$('.enter-btn').click(function(e){ 
+    const timings = [400, 800, 1700, 3400, 4000, 4600, 5600, 6400, 7000, 8000]
+
+    for(let i = 0; i < timings.length; i++) {
+        const timing = timings[i];
+        setTimeout(function Timer () {
+             console.log(i)
+            document.querySelector(`.chat${i}`).classList.add('chat-show'); 
+        }, timing);
+    }
 });
 
 //앵커버튼 focus 설정
@@ -53,34 +40,36 @@ for (let i = 0; i < $('.anchor-btn').length; i++){
     })
 };
 
-//앵커버튼 위치 이동
-$(document).ready(function(){		
-    $('#keyword1').click(function(){			
-        var offset = $('#interview1').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword2').click(function(){			
-        var offset = $('#interview2').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword3').click(function(){			
-        var offset = $('#interview3').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword4').click(function(){			
-        var offset = $('#interview4').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword5').click(function(){			
-        var offset = $('#interview5').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword6').click(function(){			
-        var offset = $('#interview6').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
-    $('#keyword7').click(function(){			
-        var offset = $('#interview7').offset();
-        $('html').animate({scrollTop : offset.top}, 400);		
-    });	
+let isInInterview = false;
+//엥커버튼 해당 인터뷰 영역에 오면 포커스 바꿔주기
+window.addEventListener('scroll', function(){
+    
+    $(document).ready(function(){
+        var height = $(window).scrollTop();
+
+        for (let i = 0; i < $('.anchor-btn').length; i++){		
+            var offset = $(`#interview${i}`).offset();
+            if (height >= Math.floor(offset.top) ) {
+                if(isInInterview) return;
+                swiper.slideTo(i);
+                isInInterview = false;
+                $('.anchor-btn').removeClass('anchor-focus');
+                $('.anchor-btn').eq(i).addClass('anchor-focus');
+
+            } 
+        };
+    });
+
 });
+
+
+//앵커버튼 위치 이동
+$(document).ready(function(){
+    for (let i = 0; i <= $('.anchor-btn').length; i++){
+        $(`#keyword${i}`).click(function(){			
+            var offset = $(`#interview${i}`).offset();
+            $('html').animate({scrollTop : offset.top}, 400);		
+        });	
+    };
+});
+

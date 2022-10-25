@@ -5,32 +5,33 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-//인트로 페이지 버튼 이벤트 (프로필 선택, 에러메세지)
+//인트로 페이지 입장하기 버튼 이벤트 (프로필 선택, 에러메세지, 채팅 띄우기, 채팅 내용 바꾸기)
 $('.enter-btn').click(function(e){
-    var listVar = $('input[name=person]:checked').val();
+    var ProfileVal = $('input[name=person]:checked').val();
     
-    if (listVar === '밤프인' || listVar === '예비 밤프인') {
+    //프로필 선택
+    if (ProfileVal === '밤프인' || ProfileVal === '예비 밤프인' || ProfileVal === '외부인') {
         document.querySelector('.intro-page').classList.add('hidden');
         document.querySelector('.main-page').classList.add('show');  
-        document.querySelector('.selected-profile').innerText = listVar;
+        document.querySelector('.selected-profile').innerText = ProfileVal;
     } else {
         e.preventDefault();
         $('.message-profile').addClass('error-show');
     }
+    //채팅 띄우기
+    const timings = [400, 800, 1700, 3400, 4000, 4600, 5600, 6400, 7000, 8000]
+    
+    if (ProfileVal != null){
+        for(let i = 0; i < timings.length; i++) {
+            const timing = timings[i];
+            setTimeout(function Timer () {
+                 console.log(i)
+                document.querySelector(`.chat${i}`).classList.add('chat-show'); 
+            }, timing);
+        }
+    }
 })
 
-//입장하기 버튼 클릭 시 채팅 보여주기 
-$('.enter-btn').click(function(e){ 
-    const timings = [400, 800, 1700, 3400, 4000, 4600, 5600, 6400, 7000, 8000]
-
-    for(let i = 0; i < timings.length; i++) {
-        const timing = timings[i];
-        setTimeout(function Timer () {
-             console.log(i)
-            document.querySelector(`.chat${i}`).classList.add('chat-show'); 
-        }, timing);
-    }
-});
 
 //앵커버튼 focus 설정
 for (let i = 0; i < $('.anchor-btn').length; i++){
@@ -40,8 +41,9 @@ for (let i = 0; i < $('.anchor-btn').length; i++){
     })
 };
 
-let isInInterview = false;
 //엥커버튼 해당 인터뷰 영역에 오면 포커스 바꿔주기
+let isInInterview = false;
+
 window.addEventListener('scroll', function(){
     
     $(document).ready(function(){
@@ -55,7 +57,6 @@ window.addEventListener('scroll', function(){
                 isInInterview = false;
                 $('.anchor-btn').removeClass('anchor-focus');
                 $('.anchor-btn').eq(i).addClass('anchor-focus');
-
             } 
         };
     });

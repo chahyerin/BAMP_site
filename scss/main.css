@@ -185,7 +185,7 @@ input[type=radio]:checked + label .active-text-line {
 
 .enter-btn {
   margin-top: 48px;
-  padding: 12px 60px 10px;
+  padding: 12px 80px 10px;
   border-radius: 10px;
   background-color: #FFC800;
   color: #524740;
@@ -247,14 +247,14 @@ input[type=radio]:checked + label .active-text-line {
 
 .chatting-background {
   width: 100%;
-  background-color: #f9f5ea;
+  background-color: #f9f9f9;
   overflow-y: hidden;
 }
 
 .chatting-area {
   max-width: 750px;
   width: 100%;
-  background-color: #FFF2C4;
+  background-color: #fff;
   margin: auto;
   padding: 80px 20px 40px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -321,7 +321,7 @@ input[type=radio]:checked + label .active-text-line {
   margin-top: 8px;
   font-size: 16px;
   padding: 10px 24px 8px;
-  background-color: #fff;
+  background-color: #e9e9eb;
   border-radius: 0px 20px 20px 20px;
 }
 
@@ -398,8 +398,6 @@ input[type=radio]:checked + label .active-text-line {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .swiper-slide {
@@ -429,6 +427,7 @@ input[type=radio]:checked + label .active-text-line {
 
 .interview-description {
   font-size: 20px;
+  font-weight: 400;
   line-height: 28px;
   color: #999;
   margin-top: 8px;
@@ -459,7 +458,7 @@ input[type=radio]:checked + label .active-text-line {
 }
 
 .interview-img {
-  padding-top: 56.25%;
+  padding-top: 60%;
   position: relative;
 }
 

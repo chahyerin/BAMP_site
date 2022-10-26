@@ -123,7 +123,7 @@ input[type=radio]:checked + label {
 
 .enter-btn {
     margin-top: 48px;
-    padding: 12px 60px 10px;
+    padding: 12px 80px 10px;
     border-radius: 10px;
     background-color: $bampYellow;
     color: $brown;
@@ -179,13 +179,13 @@ input[type=radio]:checked + label {
 //채팅 영역
 .chatting-background {
     width: 100%;
-    background-color: #f9f5ea;
+    background-color: #f9f9f9;
     overflow-y: hidden;
 }
 .chatting-area {
     max-width: 750px;
     width: 100%;
-    background-color: #FFF2C4;
+    background-color: $white;
     margin: auto;
     padding: 80px 20px 40px;
     box-shadow: $shadow;
@@ -233,7 +233,7 @@ input[type=radio]:checked + label {
     margin-top: 8px;
     font-size: 16px;
     padding: 10px 24px 8px;
-    background-color: $white;
+    background-color: #e9e9eb;
     border-radius: 0px 20px 20px 20px;
 }
 .chat-right {
@@ -295,7 +295,6 @@ input[type=radio]:checked + label {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 .swiper-slide {
     width: auto !important;
@@ -319,6 +318,7 @@ input[type=radio]:checked + label {
 }
 .interview-description {
     font-size: 20px;
+    font-weight: 400;
     line-height: 28px;
     color: #999;
     margin-top: 8px;
@@ -344,7 +344,7 @@ input[type=radio]:checked + label {
     }
 }
 .interview-img {
-    padding-top: 56.25%;
+    padding-top: 60%;
     position: relative;
     img {
         position: absolute;
@@ -352,7 +352,6 @@ input[type=radio]:checked + label {
         background-color: rgb(213, 213, 213);
         width: 100%;
         height: 100%;
-        // height: 448px;
         border-radius: 10px;
         border: none;
         object-fit: cover;

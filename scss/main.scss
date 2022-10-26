@@ -31,7 +31,7 @@
     p {
         margin-top: 12px;
         color: $white;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 'bold';
     }
 }
@@ -41,7 +41,6 @@
         text-align: center;
         margin: auto;   
         color: $brown;
-        font-size: 14px;
         width: 50%;
         padding: 6px 8px 4px;
         border-radius: 30px;
@@ -50,7 +49,7 @@
 }        
 .profile-box {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     justify-content: center;
     margin: 32px auto 0px;
 }
@@ -68,13 +67,14 @@ input[type=radio] + label {
 } 
 
 .profile-img {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     padding: 4px;
-    border-radius: 25px;
-    border: 3px solid rgba($color: $bampYellow, $alpha: 0);
+    border-radius: 20px;
+    border: 2px solid rgba($color: $bampYellow, $alpha: 0);
     img {
         width: 100%;
+        border-radius: 15px;
     }
 }
 .user-name {
@@ -94,14 +94,14 @@ input[type=radio] + label {
     }
 }
 .profile:hover {
-    .profile-img {border: 3px solid $bampYellow;}
+    .profile-img {border: 2px solid $bampYellow;}
     .active-text-line {
         transform: translateX(0px);
     }
 }
 
 input[type=radio]:checked + label { 
-    .profile-img {border: 3px solid $bampYellow;}
+    .profile-img {border: 2px solid $bampYellow;}
     .active-text-line {
         transform: translateX(0px);
     }
@@ -122,13 +122,14 @@ input[type=radio]:checked + label {
 }
 
 .enter-btn {
-    margin-top: 48px;
-    padding: 12px 80px 10px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px 80px 8px;
     border-radius: 10px;
     background-color: $bampYellow;
     color: $brown;
     border: none;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     transition: transform 0.3s;
 }
@@ -181,6 +182,7 @@ input[type=radio]:checked + label {
     width: 100%;
     background-color: #f9f9f9;
     overflow-y: hidden;
+    border-bottom: 3px solid #f9f9f9;
 }
 .chatting-area {
     max-width: 750px;
@@ -283,6 +285,11 @@ input[type=radio]:checked + label {
     flex-wrap: wrap;
     justify-content: center;
     z-index: 1000;
+}
+.btn-answer {
+    padding: 8px 0px 8px 6px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .anchor-btn {
     padding: 10px 24px 8px;

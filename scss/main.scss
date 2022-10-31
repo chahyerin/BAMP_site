@@ -10,7 +10,7 @@
     align-items: center;
     text-align: center;
     // 배경 이미지
-    background-color: rgba($color: $black, $alpha: 0.6);
+    background-color: rgba($color: $black, $alpha: 0.8);
     background-image: url("../source/intro/intro-background.png");
     background-size: cover;
     background-position: center;
@@ -402,15 +402,15 @@ input[type=radio]:checked + label {
         margin-top: 20px;
     }
 }
+.link-donation-list {
+    margin: 20px auto 0px;
+    width: 180px;
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+}
 
-
-// @media screen and (max-width: $tablet) {
-//     .keyword-anchor-btns {
-//         width: 100%;
-//         flex-wrap: nowrap;
-//         overflow-x: hidden;
-//     }
-// }
 
 /* Mobile부분 CSS */
 @media screen and (max-width: $mobile) {

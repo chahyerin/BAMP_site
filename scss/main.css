@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 * {
   margin: 0px;
   -webkit-box-sizing: 0px;
@@ -42,7 +43,7 @@ h1, h2, h3, h4, h5, h6, strong {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   background-image: url("../source/intro/intro-background.png");
   background-size: cover;
   background-position: center;
@@ -538,6 +539,16 @@ input[type=radio]:checked + label .active-text-line {
 
 .donation p {
   margin-top: 20px;
+}
+
+.link-donation-list {
+  margin: 20px auto 0px;
+  width: 180px;
+}
+
+.link-donation-list a {
+  text-decoration: none;
+  color: #000;
 }
 
 /* Mobile부분 CSS */

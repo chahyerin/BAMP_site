@@ -1,0 +1,101 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+* {
+  margin: 0px;
+  -webkit-box-sizing: 0px;
+          box-sizing: 0px;
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url(./source/font/NotoSansKR-Regular.otf);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(./source/font/NotoSansKR-Bold.otf);
+}
+
+body {
+  font-family: 'regular';
+  letter-spacing: -0.25px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: 'bold';
+}
+
+.donation-area {
+  background-image: url(../source/donation/donation_background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.content-area {
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 80px 0px 100px;
+}
+
+.donation-people {
+  margin-top: 40px;
+}
+
+.donation-people img {
+  width: 100%;
+}
+
+.talent-donation-people {
+  margin-top: 80px;
+}
+
+.talent-donation-people img {
+  width: 100%;
+}
+
+.update-list {
+  color: #555;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.people-list {
+  font-family: 'Jeju Myeongjo', serif;
+  line-height: 32px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.people-list .list-class {
+  margin-top: 28px;
+}
+
+.people-list .list-class-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.talent-people-list {
+  font-family: 'Jeju Myeongjo', serif;
+  line-height: 48px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.talent-people-list .talent-class-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.donation-route {
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.donation-route p {
+  margin-top: 8px;
+}
+/*# sourceMappingURL=donation.css.map */

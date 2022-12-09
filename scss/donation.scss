@@ -82,7 +82,7 @@
 }
 
 .donationBank{
-    margin: 120px auto 100px;
+    margin: 120px auto 50px;
     img{
         width: 650px;
     }
@@ -91,4 +91,34 @@
 .bankSource{
     position: relative;
     bottom: 65px;
+}
+
+@media screen and (max-width: 768px) {
+    .donation-area{
+        background-position: top;
+    }
+    .content-area{
+        padding: 130px 0px 50px;
+    }
+    .sub-text{
+        p{
+            font-size: 10px;
+        }
+    }
+    .person{
+        img{
+            width: 70px;
+            height: 80px;
+        }
+    }
+    .donationBank{
+        margin: 90px auto 0px;
+        img{
+            width: 300px;
+        }
+    }
+    .bankSource{
+        font-size: 13px;
+        bottom : 35px;
+    }
 }

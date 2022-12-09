@@ -9,65 +9,68 @@
     <link rel="stylesheet" href="../scss/donation.css">
 </head>
 <body>
+
+    <!-- [      위에 헤더 Section      ]-->
+    <header class="header">
+        <img src="../source/bamp_logo.svg" alt="BAMP">
+    </header>
+
+    <!-- [     본문 Section      ]-->
     <div class="donation-area">
         <div class="content-area">
-            <img src="../source/bamp_logo.svg" alt="BAMP">
-            <div class="donation-people">
-                <img src="../source/donation/title1.png" alt="누구든 될 수 있기에, 여러분의 Who ₩ 입니다. ">
-                <div class="update-list">2022.10.31 기준 후원자 명단</div>
-                <div class="people-list">
-                    <div class="list-class">
-                        <p class="list-class-name">20기</p>
-                        <p>최광래</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">22기</p>
-                        <p>강수진  문다솜</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">24기</p>
-                        <p>김진우  장홍석</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">27기</p>
-                        <p>김진명  김준용</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">28기</p>
-                        <p>이지예  김하림</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">29기</p>
-                        <p>동주용  이승수  최규환</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">30기</p>
-                        <p>박준석</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">31기</p>
-                        <p>이서현</p>
-                    </div>
-                    <div class="list-class">
-                        <p class="list-class-name">32기</p>
-                        <p>오치형</p>
-                    </div>
 
+
+            <!-- [     메인 텍스트 Section      ]-->
+            <div class="main-text">
+                <h1>누구나 할 수 있기에,<br> Who ₩입니다.</h1>
+                
+                <div class="sub-text">
+                    <p><strong>밤프</strong>(<strong>B</strong>rand, <strong>A</strong>d, <strong>M</strong>arketing, <strong>P</strong>lanner)는 국내 최초 대학생 공모전 연합동아리로<br>
+                    2006년 1기를 시작으로 올해 33기를 맞이하고 있습니다.<br>
+                    끈끈한 OB, YB 네트워크 아래 공모전에 대해 함께 공부하고 참가하며 우수한 수상실적을 거두고 있는 동아리입니다.</p>
                 </div>
             </div>
-            <div class="talent-donation-people">
-                <img src="../source/donation/title2.png" alt="Who ₩ 을 받으면 밤사능은 부자가 됩니다. 재능기부자.">
-                <div class="talent-people-list">
-                    <p class="talent-class-name">밤사능</p>
-                    김다은  김영주  이성민  이재학  임승규 <br>
-                    박서영  박지후  정아인  차혜린  하소정
+
+
+            <!-- [     기부 Section      ]-->
+            <div class="donation">
+
+                <div class="donationText">
+                    <h4>우리의 활동에 힘이 되어주신 분들</h4>
+                    <p>2022.12.09일 기준 후원자</p>
+                </div>
+
+                
+                <!-- [     기부자 이미지  Section      ]-->
+                <div class="donors">
+                 <!-- [   기부자 이미지는 JS로 삽입     ]-->
                 </div>
             </div>
-            <div class="donation-route">
-                <p>후원</p>
-                <p><strong>카카오뱅크  </strong>  정아인 7979-59-34529</p>
+
+
+            <div class="bamsaneung">
+
+                <div class="bamsaneungText">
+                    <h4>밤사능을 부자로 만들어준 재능 기부자들</h4>
+                </div>
+
+                
+                <!-- [     기부자 이미지  Section      ]-->
+                <div class="members">
+                 <!-- [   밤사능 이미지는 JS로 삽입     ]-->
+                </div>
             </div>
+
+
+            <div class="donationBank">
+                <img src="../source/donation/donors/donationBank.svg" alt="">
+                <p class="bankSource"><strong>카카오뱅크</strong> 정아인 7979-59-3429</p>
+            </div>
+
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./donation.js"></script>
 </body>
 </html> 

@@ -2,46 +2,34 @@
 @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 * {
   margin: 0px;
-  -webkit-box-sizing: 0px;
-          box-sizing: 0px;
+  box-sizing: 0px;
 }
 
 @font-face {
-  font-family: 'regular';
-  src: url(./source/font/NotoSansKR-Regular.otf);
+  font-family: "regular";
+  src: url(../source/font/NotoSansKR-Regular.otf);
 }
-
 @font-face {
-  font-family: 'bold';
-  src: url(./source/font/NotoSansKR-Bold.otf);
+  font-family: "bold";
+  src: url(../source/font/NotoSansKR-Bold.otf);
 }
-
 body {
-  font-family: 'regular';
+  font-family: "regular";
   letter-spacing: -0.25px;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-  font-family: 'bold';
+  font-family: "bold";
 }
 
 .intro-page {
   width: 100%;
   height: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   background-image: url("../source/intro/intro-background.png");
@@ -53,30 +41,26 @@ h1, h2, h3, h4, h5, h6, strong {
 .intro-title {
   color: #fff;
 }
-
 .intro-title h1 {
   font-size: 28px;
 }
-
 .intro-title .intro-description {
   color: #999;
   margin-top: 12px;
   font-size: 14px;
-  font-weight: 'regular';
+  font-weight: "regular";
   line-height: 24px;
 }
-
 .intro-title p {
   margin-top: 12px;
   color: #fff;
   font-size: 20px;
-  font-weight: 'bold';
+  font-weight: "bold";
 }
 
 .choose-profile {
   margin-top: 60px;
 }
-
 .choose-profile .profile-title {
   text-align: center;
   margin: auto;
@@ -88,13 +72,9 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 .profile-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 24px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 32px auto 0px;
 }
 
@@ -120,7 +100,6 @@ input[type=radio] + label {
   border-radius: 20px;
   border: 2px solid rgba(255, 200, 0, 0);
 }
-
 .profile-img img {
   width: 100%;
   border-radius: 15px;
@@ -129,53 +108,42 @@ input[type=radio] + label {
 .user-name {
   margin-top: 16px;
 }
-
 .user-name h5 {
   color: #fff;
   font-size: 14px;
   text-align: center;
 }
-
 .user-name .active-text-line {
   width: 100%;
   height: 2px;
   margin-top: 4px;
   background-color: #FFC800;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translateX(-100px);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .profile:hover .profile-img {
   border: 2px solid #FFC800;
 }
-
 .profile:hover .active-text-line {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 input[type=radio]:checked + label .profile-img {
   border: 2px solid #FFC800;
 }
-
 input[type=radio]:checked + label .active-text-line {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .error {
   font-size: 14px;
   color: #e43121;
-  font-weight: 'bold';
+  font-weight: "bold";
   margin-top: 12px;
   height: 0px;
   overflow: hidden;
   visibility: hidden;
-  -webkit-transition: height 0.3s;
   transition: height 0.3s;
 }
 
@@ -194,22 +162,18 @@ input[type=radio]:checked + label .active-text-line {
   border: none;
   font-size: 20px;
   font-weight: 700;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .enter-btn:hover {
   cursor: pointer;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .copyright {
   text-align: center;
   font-size: 12px;
-  font-weight: 'regular';
+  font-weight: "regular";
   color: #777;
   position: absolute;
   bottom: 20px;
@@ -235,12 +199,10 @@ input[type=radio]:checked + label .active-text-line {
   top: 0px;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-
 .header img {
   margin: 15px auto;
   display: block;
@@ -260,30 +222,21 @@ input[type=radio]:checked + label .active-text-line {
   background-color: #fff;
   margin: auto;
   padding: 80px 20px 40px;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
   color: #999;
   top: 80px;
 }
-
 .chat-message h5 {
   width: 30%;
   text-align: center;
 }
-
 .chat-message hr {
   width: 35%;
   height: 0.5px;
@@ -291,8 +244,6 @@ input[type=radio]:checked + label .active-text-line {
 
 .chat-left {
   margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 0;
 }
@@ -303,7 +254,6 @@ input[type=radio]:checked + label .active-text-line {
   border-radius: 100px;
   overflow: hidden;
 }
-
 .chat-profile img {
   width: 100%;
   height: 100%;
@@ -314,7 +264,6 @@ input[type=radio]:checked + label .active-text-line {
 .chat-user-information {
   margin-left: 10px;
 }
-
 .chat-user-information .chat-user-name {
   font-size: 12px;
   font-weight: 500;
@@ -357,17 +306,14 @@ input[type=radio]:checked + label .active-text-line {
   text-align: center;
   margin-top: 200px;
 }
-
 .interview-title img {
   width: 240px;
 }
-
 .interview-title p {
   margin-top: 28px;
   font-size: 16px;
   font-weight: 500;
 }
-
 .interview-title h1 {
   margin: 12px auto 200px;
   font-size: 24px;
@@ -379,14 +325,9 @@ input[type=radio]:checked + label .active-text-line {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   z-index: 1000;
 }
 
@@ -457,7 +398,6 @@ input[type=radio]:checked + label .active-text-line {
 .interview-visual-content {
   margin-top: 40px;
 }
-
 .interview-visual-content h6 {
   font-size: 14px;
   font-weight: 400;
@@ -470,11 +410,10 @@ input[type=radio]:checked + label .active-text-line {
   padding-top: 60%;
   position: relative;
 }
-
 .interview-img img {
   position: absolute;
   top: 0;
-  background-color: #d5d5d5;
+  background-color: rgb(213, 213, 213);
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -485,22 +424,13 @@ input[type=radio]:checked + label .active-text-line {
 
 .BAMP-SNS {
   margin: 120px auto 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
 .SNS-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 32px auto;
   gap: 20px;
@@ -511,32 +441,25 @@ input[type=radio]:checked + label .active-text-line {
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-
 .icon-img img {
   width: 100%;
 }
 
 .icon-img:hover {
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+  transform: scale(0.96);
 }
 
 .donation {
   margin-top: 60px;
   text-align: center;
 }
-
 .donation h6 {
   margin-top: 12px;
   font-size: 14px;
   color: #999;
 }
-
 .donation p {
   margin-top: 20px;
 }
@@ -545,7 +468,6 @@ input[type=radio]:checked + label .active-text-line {
   margin: 20px auto 0px;
   width: 180px;
 }
-
 .link-donation-list a {
   text-decoration: none;
   color: #000;
@@ -573,5 +495,4 @@ input[type=radio]:checked + label .active-text-line {
     margin: 24px 5px 0px auto;
     padding: 10px 16px 8px;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
